@@ -9,7 +9,7 @@ sat = Orbital('NOAA 19', tle_file='noaa19.txt')
 #utc_time = datetime(2022, 3, 18)
 utc_time = datetime.utcnow()
 length = 24
-lon, lat = 55.920625, 37.557141
+lat, lon = 55.920625, 37.557141
 alt = 0.185
 passes = sat.get_next_passes(utc_time, length, lon, lat, alt)
 out = "В течение следующих " + str(length) + " часов ожидается " + str(len(passes)) + " пролётов:\n"
